@@ -1,0 +1,195 @@
+﻿<Window x:Class="wpfWork.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:wpfWork"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Image 
+            Grid.Row="1"
+            Grid.Column="0"
+            Grid.RowSpan="2"
+            Grid.ColumnSpan="2"
+            Source="\Image\photo1.jpeg"/>
+        <Button x:Name="AddBtn1"
+            Grid.Column="0"
+            Grid.Row="3"
+            Grid.RowSpan="1"
+            Grid.ColumnSpan="2"
+            FontFamily="Century Gothic"
+            Content="Добавить в корзину"
+            Foreground="Black"
+            Width="130"
+            Height="20"
+            FontSize="12"
+            FontWeight="DemiBold"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"/>
+        <Image 
+            Grid.Row="1"
+            Grid.Column="2"
+            Grid.RowSpan="2"
+            Grid.ColumnSpan="2"
+            Source="\Image\photo2.jpeg"/>
+        <Button x:Name="AddBtn2"
+            Grid.Column="2"
+            Grid.Row="3"
+            Grid.RowSpan="1"
+            Grid.ColumnSpan="2"
+            FontFamily="Century Gothic"
+            Content="Добавить в корзину"
+            Foreground="Black"
+            Width="130"
+            Height="20"
+            FontSize="12"
+            FontWeight="DemiBold"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"/>
+        <TextBlock Grid.Column="5"
+            Grid.Row="0"
+            Grid.RowSpan="1"
+            Grid.ColumnSpan="4"
+            FontFamily="Century Gothic"
+            Text="DOLLY SHOP"
+            TextWrapping="Wrap"
+            Foreground="Black"
+            FontSize="35"
+            FontWeight="DemiBold"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"/>
+        <TextBlock Text="Наличие"
+            Grid.Column="1"
+            Grid.Row="6"
+            Grid.ColumnSpan="2"
+            FontFamily="Century Gothic"
+            Foreground="Black"
+            Width="65"
+            Height="30"
+            FontSize="15"
+            FontWeight="DemiBold"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"/>
+        <ComboBox x:Name="ChoiseCB" 
+            Grid.Column="1"
+            Grid.Row="6"
+            Grid.RowSpan="2"
+            Grid.ColumnSpan="2"
+            FontFamily="Century Gothic"
+            Foreground="Black"
+            Width="200"
+            Height="30"
+            FontSize="15"
+            FontWeight="DemiBold"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center">
+            <ComboBoxItem>
+                Все
+            </ComboBoxItem>
+            <ComboBoxItem>
+                В наличии
+            </ComboBoxItem>
+            <ComboBoxItem>
+                Не в наличии
+            </ComboBoxItem>
+        </ComboBox>
+        <TextBlock Text="Вы точно из России?"
+                   Grid.Column="1"
+                   Grid.ColumnSpan="2"
+                   Grid.Row="5"/>
+        <RadioButton x:Name="HaRBtn"
+                     Margin="50 0 0 0"
+                     Content="Да, я не чурка."
+                     Grid.ColumnSpan="2"
+                     Grid.Row="5"
+                     VerticalAlignment="Bottom"/>
+        <RadioButton x:Name="HaRBtn1"
+                     Content="Нет, я чурка."
+                     Grid.Column="2"
+                     Grid.ColumnSpan="2"
+                     Grid.Row="5"
+                     VerticalAlignment="Bottom"/>
+        <CheckBox FontFamily="Century Gothic" FontSize="20"
+            x:Name="checkBox1" IsThreeState="True" 
+            IsChecked="False" 
+            Height="20" 
+            Content="Вы из России?" 
+            Grid.Row="4"
+            Grid.Column ="1"
+            Grid.ColumnSpan="2"/>
+        <TextBlock Grid.Column="7"
+                   
+            Grid.ColumnSpan="2"
+            Grid.Row="3"
+            FontFamily="Century Gothic"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            Text="Логин"
+            FontSize="22"/>
+        <TextBox x:Name = "LoginTB"
+            Grid.Column="7"
+            Grid.ColumnSpan="2"
+            Grid.Row="4"
+            BorderBrush="#DC143C"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            Padding="10 0"
+            Height="30"
+            Width="150"
+            FontSize="22"/>
+        <TextBlock Grid.Column="7"
+            Grid.ColumnSpan="2"
+            Grid.Row="5"
+            FontFamily="Century Gothic"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            Text="Пароль"
+            FontSize="22"/>
+        <PasswordBox x:Name = "PasswordTB"
+            Grid.Column="7"
+            Grid.ColumnSpan="2"
+            Grid.Row="6"
+            BorderBrush="#DC143C"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            Padding="10 0"
+            Height="30"
+            FontSize="22"
+            Width="150"/>
+        <Button x:Name="loginBtn"
+            Content="Войти"
+            Background="#CD5C5C"
+            FontFamily="Century Gothic"
+            BorderBrush="#DC143C"
+            FontSize="20"
+            Grid.Column="7"
+            Grid.ColumnSpan="2"
+            Grid.Row="7"
+            Height="30"
+            Click="loginBtn_Click_1" Margin="10"/>
+    </Grid>
+</Window>
